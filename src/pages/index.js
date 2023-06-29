@@ -1,9 +1,11 @@
-import HomeLayout from "@/layout/Layout";
+import Layout from "@/layout/Layout";
+import { Fragment } from "react";
 
 export default function Home() {
+
     return (
-        <HomeLayout>
-        
-        </HomeLayout>
+        <Fragment>
+            <Layout></Layout>
+        </Fragment>
     )
 }

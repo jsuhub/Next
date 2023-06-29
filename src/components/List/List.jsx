@@ -3,15 +3,25 @@ import style from './List.module.css';
 import axios from "axios";
 import { useRouter } from "next/router";
 
+const active = {
+    color: "white"
+}
+
 export default function Aritcle() {
 
     const [articleList, setArticleList] = useState([])
     const [page, setPage] = useState(1);
-    const [isRecommendActive, setRecommendActive] = useState(false);
+    const [isRecommendActive, setRecommendActive] = useState(true);
     const [isLatestActive, setLatestActive] = useState(false);
 
-    const handleButton1Click = () => {
-        setRecommendActive(!isButton1Active);
+    const handleRecommendClick = () => {
+        setLatestActive(false)
+        setRecommendActive(true);
+    };
+
+    const handleLatestClick = () => {
+        setRecommendActive(false);
+        setLatestActive(true);
     };
 
     const router = useRouter()
@@ -56,14 +66,16 @@ export default function Aritcle() {
             <div className={style.middle}>
                 <div className={style.middleNav}>
                     <div
-                        className={
-                            style.recommend
-                        }
-                    >
-                        推荐
-                    </div>
+                        onClick={handleRecommendClick}
+                        className={style.recommend}
+                        style={isRecommendActive ? active : null}
+                    >推荐</div>
 
-                    <div className={style.latest}>最新</div>
+                    <div
+                        onClick={handleLatestClick}
+                        style={isLatestActive ? active : null}
+                        className={style.latest}
+                    >最新</div>
                 </div>
 
                 {

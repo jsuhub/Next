@@ -5,9 +5,11 @@ export default function Navigator({ children }) {
     return (
         <Fragment>
             <nav className={style.left}>
-                {
-                    children
-                }
+                <div className={style.link}>
+                    {
+                        children
+                    }
+                </div>
             </nav>
         </Fragment>
     )

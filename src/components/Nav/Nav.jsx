@@ -2,10 +2,14 @@ import { Fragment } from "react";
 import style from './Nav.module.css';
 import Image from "next/image";
 import Link from "next/link";
-
-const navItem = ["index", "question"]
+// import { useStore } from "zustand";
 
 export default function Nav() {
+
+    // const [isLogin, setIsLogin] = useStore(
+    //     state => [state.isLogin, state.setIsLogin]
+    // )
+
 
     return (
         <Fragment>
@@ -24,11 +28,24 @@ export default function Nav() {
                     </div>
 
                     <div className={style.headerButtons}>
-                        <input className={style.search} type="text" placeholder="  搜索内容🔍"/>
-                        <button className={style.feedback}>反馈</button>
-                        <button className={style.signUp}>
-                            <Link href={"/login"}>登录</Link>
-                        </button>
+                        <input className={style.search} type="text" placeholder="  搜索内容🔍" />
+                        {
+                            true == true
+                                ? (
+                                    <div>
+                                        <button className={style.avatar}></button>
+                                        <Link href={"/"}>退出</Link>
+                                    </div>
+                                )
+                                : (
+                                    <div>
+                                        <button className={style.feedback}>反馈</button>
+                                        <button className={style.signUp}>
+                                            <Link href={"/login"}>登录</Link>
+                                        </button>
+                                    </div>
+                                )
+                        }
                     </div>
                 </nav>
 

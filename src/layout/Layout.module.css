@@ -1,12 +1,10 @@
 .main {
-    width: 1200px;
     margin: auto;
     margin-top: 64px;
     padding-top: 24px;
     display: flex;
-    gap: 24px;
+    gap: 20px;
 }
-
 
 .link {
     display: flex;
@@ -14,8 +12,10 @@
     align-items: center;
     border-radius: 5px;
     height: 48px;
+    position: relative;
 }
 
 .link:hover {
     background-color: rgb(255, 255, 255, .25);
 }
+

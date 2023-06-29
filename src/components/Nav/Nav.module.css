@@ -54,3 +54,12 @@
     border: none;
     border-radius: 5px;
 }
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    background-color: #fff;
+    color: black;
+    border: none;
+    border-radius: 588px;
+}
