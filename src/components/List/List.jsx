@@ -7,6 +7,12 @@ export default function Aritcle() {
 
     const [articleList, setArticleList] = useState([])
     const [page, setPage] = useState(1);
+    const [isRecommendActive, setRecommendActive] = useState(false);
+    const [isLatestActive, setLatestActive] = useState(false);
+
+    const handleButton1Click = () => {
+        setRecommendActive(!isButton1Active);
+    };
 
     const router = useRouter()
 
@@ -49,7 +55,14 @@ export default function Aritcle() {
         <Fragment>
             <div className={style.middle}>
                 <div className={style.middleNav}>
-                    <div className={style.recommend}>推荐</div>
+                    <div
+                        className={
+                            style.recommend
+                        }
+                    >
+                        推荐
+                    </div>
+
                     <div className={style.latest}>最新</div>
                 </div>
 

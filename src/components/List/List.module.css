@@ -35,6 +35,11 @@
     
 }
 
+.active {
+    color: rgb(255, 255, 255, .4);
+
+}
+
 .card {
     display: flex;
     flex-direction: column;

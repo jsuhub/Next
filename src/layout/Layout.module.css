@@ -7,3 +7,15 @@
     gap: 24px;
 }
 
+
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    height: 48px;
+}
+
+.link:hover {
+    background-color: rgb(255, 255, 255, .25);
+}

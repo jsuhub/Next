@@ -3,7 +3,7 @@ import { transformMarkdown } from "@/lib/transformMarkdown";
 import axios from "axios";
 import { Fragment, useEffect, useState } from "react";
 import style from './posts.module.css'
-import PostLayout from "@/layout/PostLayout";
+import PostLayout from "@/layout/post/PostLayout";
 
 export default function Post(props) {
 
