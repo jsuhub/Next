@@ -1,0 +1,69 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 64px);
+    background-color: #000000;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.button {
+    width: 320px;
+    height: 48px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.github {
+    margin: 40px 0 10px 0;
+    padding: 0%;
+    width: 320px;
+    height: 48px;
+    border-radius: 5px;
+    border: 0;
+    font-size: large;
+    background-color: #25292e;
+}
+
+.gitlab {
+    padding: 0%;
+    width: 320px;
+    height: 48px;
+    border-radius: 5px;
+    margin: 10px 0;
+    border: 0;
+    font-size: large;
+    background-color: #6750b5;
+}
+
+.bitbucket {
+    padding: 0%;
+    width: 320px;
+    height: 48px;
+    border-radius: 8px;
+    margin: 10px 0;
+    border: 0;
+    font-size: large;
+    background-color: #2151c5;
+}
+
+.hr {
+    margin: 16px;
+    width: 320px;
+    border-color: rgba(255, 255, 255, .4);
+}
+
+.sso {
+    margin: 0 0 10px 0;
+    padding: 0%;
+    width: 320px;
+    height: 48px;
+    border-radius: 5px;
+    border: 0;
+    font-size: large;
+    background-color: #545454;
+}
+
+.register {
+    color: #6750b5;
+}

@@ -1,0 +1,63 @@
+.main {
+    width: 1200px;
+    margin: auto;
+    margin-top: 64px;
+    display: flex;
+    gap: 24px;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+    width: 680px;
+    background-color: rgb(255, 255, 255, .1);
+    border-radius: 5px;
+    margin-bottom: 24px;
+}
+
+.question {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+}
+
+.editor {
+    height: 200px;
+    border-radius: 5px;
+    border: none;
+    background-color: #525050;
+}
+
+.editorButtom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toolbar {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+
+}
+
+.submit {
+    width: 90px;
+    height: 36px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3e3c3c;
+}
+
+.card {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    height: 320px;
+    padding: 16px;
+    gap: 16px;
+    background-color: rgb(255, 255, 255, .3);
+    border-radius: 5px;
+}

@@ -1,0 +1,21 @@
+.left {
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    background-color: rgb(255, 255, 255, .1);
+    border-radius: 5px;
+    padding: 10px;
+    align-self: flex-start
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    height: 48px;
+}
+
+.link:hover {
+    background-color: rgb(255, 255, 255, .25);
+}

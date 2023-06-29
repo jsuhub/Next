@@ -1,0 +1,65 @@
+
+
+
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 21.66rem;
+    border-radius: 5px;
+    align-self: self-start;
+}
+
+.create {
+    display: flex;
+    padding: 16px;
+    border-radius: 5px;
+    flex-direction: column;
+    gap: 16px;
+    background-color: rgb(255, 255, 255, .1);
+}
+
+.rightFirst {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rightSecond {
+    display: flex;
+    justify-content: space-around;
+}
+
+.rightSecondCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rightSecondButton {
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 100px;
+    margin-bottom: 8px;
+}
+
+.rightThird {
+    height: 96px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255, .1);
+}
+
+.rightFourth {
+    height: 48px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255, .1);
+}
+
+.adv {
+    height: 96px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255, .1);
+}
