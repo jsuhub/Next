@@ -1,0 +1,9 @@
+.left {
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    background-color: rgb(255, 255, 255, .1);
+    border-radius: 5px;
+    padding: 10px;
+    align-self: flex-start
+}

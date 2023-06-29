@@ -1,0 +1,77 @@
+.main {
+    width: 100%;
+    padding-top: 24px;
+    padding-right: 160px;
+    display: flex;
+    gap: 24px;
+}
+
+.left {
+    padding: 24px 0 0 80px;
+    width: 160px;
+}
+
+.leftTop {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.like {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 500px;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.hr {
+    margin: 40px 0;
+    width: 50px;
+    height: 1px;
+    border-color: rgba(255, 255, 255, .1);
+}
+
+.leftButtom {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.middle {
+    padding: 32px;
+    border-radius: 5px;
+    flex: 1;
+    background-color: rgba(255, 255, 255, .1);
+}
+
+.right {
+    list-style-type: none;
+    padding: 16px;
+    width: 300px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .1);
+}
+
+.h1 {
+    padding: 0 0 0 4px;
+}
+
+.h2 {
+    padding: 0 0 0 8px;
+}
+
+.h3 {
+    padding: 0 0 0 16px;
+}
+
+.button {
+    display: flex;
+    justify-content: flex-end;
+    width: 48px;
+    height: 48px;
+    border-radius: 500px;
+    background-color: rgb(255, 255, 255, .1);
+}
