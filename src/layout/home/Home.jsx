@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import Nav from "@/components/Nav/Nav";
-import style from './Layout.module.css';
+import style from './Home.module.css';
 import Navigator from "@/components/Navigator/Navigator";
 import List from "@/components/List/List";
 import Sidebar from "@/components/Sidebar/Sidebar";

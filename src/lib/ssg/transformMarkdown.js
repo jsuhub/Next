@@ -8,12 +8,14 @@ import addClasses from 'rehype-add-classes';
 import toc from '@jsdevtools/rehype-toc';
 import { unified } from 'unified';
 import rehypeParse from 'rehype-parse/lib';
+import remarkGfm from 'remark-gfm';
 
 export async function transformMarkdown(markdown) {
 
     const processedContent = await unified()
         .use(remarkParse)
         .use(remarkRehype)
+        .use(remarkGfm)
         // .use(addClasses, {
         //     h1,
         //     h2,

@@ -1,9 +1,8 @@
 import Nav from "@/components/Nav/Nav";
-import { transformMarkdown } from "@/lib/transformMarkdown";
-import axios from "axios";
+import { transformMarkdown } from "@/lib/ssg/transformMarkdown";
 import { Fragment, useEffect, useState } from "react";
-import style from './posts.module.css'
-import PostLayout from "@/layout/post/PostLayout";
+import PostLayout from "@/layout/post/Post";
+import request from "@/lib/request/request";
 
 export default function Post(props) {
 
@@ -13,7 +12,7 @@ export default function Post(props) {
     const [nav, setNav] = useState("")
 
     useEffect(() => {
-        axios(`http://localhost/articles/${id}`)
+        request.get(`/api/articles/${id}`)
             .then(async (res) => {
                 const a = await transformMarkdown(res.data.data.content)
 
@@ -23,8 +22,6 @@ export default function Post(props) {
 
                 setMarkdown(markdown)
                 setNav(nav)
-
-
             })
     }, [])
 

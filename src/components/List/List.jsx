@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useState } from "react";
 import style from './List.module.css';
-import axios from "axios";
-import { useRouter } from "next/router";
+import Card from "./card/card";
+import request from "@/lib/request/request";
 
 const active = {
     color: "white"
@@ -13,18 +13,31 @@ export default function Aritcle() {
     const [page, setPage] = useState(1);
     const [isRecommendActive, setRecommendActive] = useState(true);
     const [isLatestActive, setLatestActive] = useState(false);
+    const [isHotActive, setHotActive] = useState(false);
 
     const handleRecommendClick = () => {
+        setArticleList([])
+        requestArticle(`api/articles/list/page?page=${page}&size=${5}`)
         setLatestActive(false)
+        setHotActive(false)
         setRecommendActive(true);
     };
 
     const handleLatestClick = () => {
+        setArticleList([])
+        requestArticle(`api/articles/list/latest?page=${page}&size=${5}`)
         setRecommendActive(false);
+        setHotActive(false)
         setLatestActive(true);
     };
 
-    const router = useRouter()
+    const handleHotClick = () => {
+        setArticleList([])
+        requestArticle(`api/articles/list/hot?page=${page}&size=${5}`)
+        setRecommendActive(false);
+        setLatestActive(false);
+        setHotActive(true)
+    };
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
@@ -41,23 +54,24 @@ export default function Aritcle() {
     };
 
     useEffect(() => {
-        loadMoreArticles()
-    }, [page])
 
-    const loadMoreArticles = async () => {
+        if(isRecommendActive) {
+            requestArticle(`api/articles/list/${page}/${5}`)
+        }
+
+        if(isLatestActive) {
+            requestArticle(`api/articles/list/hot?page=${page}&size=${5}`)
+        }
+
+    }, [page, isRecommendActive, isLatestActive])
+
+    const requestArticle = async (url) => {
         try {
-            const res = await axios.get(`http://localhost/articles/list/${page}`);
+            const res = await request.get(url);
             const newArticles = res.data.data;
             setArticleList((prevArticleList) => [...prevArticleList, ...newArticles]);
         } catch (error) {
             console.log("Error loading more articles:", error);
-        }
-    }
-
-    function showArticle(id) {
-
-        return function () {
-            router.push(`/posts/${id}`)
         }
     }
 
@@ -67,52 +81,24 @@ export default function Aritcle() {
                 <div className={style.middleNav}>
                     <div
                         onClick={handleRecommendClick}
-                        className={style.recommend}
+                        className={style.active}
                         style={isRecommendActive ? active : null}
-                    >推荐</div>
+                    >精选</div>
 
                     <div
                         onClick={handleLatestClick}
                         style={isLatestActive ? active : null}
-                        className={style.latest}
+                        className={style.active}
                     >最新</div>
+
+                    <div
+                        onClick={handleHotClick}
+                        style={isHotActive ? active : null}
+                        className={style.active}
+                    >热门</div>
                 </div>
 
-                {
-                    articleList.map(item => {
-                        const {
-                            id,
-                            author,
-                            publish_date,
-                            tag,
-                            title,
-                            description,
-                            browser_amount,
-                            like_amount,
-                            comment_amount
-                        } = item
-
-                        return (
-                            <div onClick={showArticle(id)} key={id} className={style.card}>
-                                <div className={style.cardInfo}>
-                                    <div>{author}</div>
-                                    <div> | </div>
-                                    <div>{publish_date}</div>
-                                    <div> | </div>
-                                    <div>{tag}</div>
-                                </div>
-                                <h3>{title}</h3>
-                                <p>{description}</p>
-                                <div className={style.cardBottom}>
-                                    <div>{browser_amount}</div>
-                                    <div>{like_amount}</div>
-                                    <div>{comment_amount}</div>
-                                </div>
-                            </div>
-
-                        )
-                    })
-                }
+                <Card articleList={articleList}></Card>
 
             </div>
 

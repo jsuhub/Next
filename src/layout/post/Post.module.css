@@ -2,70 +2,49 @@
     width: 100%;
     margin-top: 64px;
     padding-top: 24px;
-    padding-right: 160px;
     display: flex;
     gap: 24px;
 }
 
-.left {
-    padding: 24px 0 0 80px;
-    width: 160px;
-}
-
-.leftTop {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.like {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 16px;
-    height: 16px;
-    border-radius: 500px;
-    background-color: rgba(255, 255, 255, .5);
-}
-
-.hr {
-    margin: 40px 0;
-    width: 50px;
-    height: 1px;
-    border-color: rgba(255, 255, 255, .1);
-}
-
-.leftButtom {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
 
 .middle {
-    padding: 32px;
+    display: flex;
+    min-width: 400px;
+    flex-direction: column;
+    padding: 0 16px;
     border-radius: 5px;
     flex: 1;
     background-color: rgba(255, 255, 255, .1);
 }
 
+
+@media screen and (max-width: 1200px) {
+    .middle {
+        margin-left: 24px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .middle {
+        margin-right: 24px;
+    } 
+}
+
 .right {
+    display: flex;
     list-style-type: none;
     padding: 16px;
+    margin-right: 160px;
     width: 300px;
     border-radius: 5px;
+    align-self: self-start;
     background-color: rgba(255, 255, 255, .1);
 }
 
-.h1 {
-    padding: 0 0 0 4px;
-}
-
-.h2 {
-    padding: 0 0 0 8px;
-}
-
-.h3 {
-    padding: 0 0 0 16px;
+@media screen and (max-width: 900px) {
+    .right {
+        display: none;
+    }
 }
 
 .button {

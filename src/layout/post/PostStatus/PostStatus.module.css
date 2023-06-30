@@ -1,0 +1,50 @@
+
+.left {
+    padding: 24px 0 0 80px;
+    width: 160px;
+}
+
+@media screen and (max-width: 1230px) {
+    .left {
+        display: none;
+    }
+}
+
+.leftTop {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.like {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 500px;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.hr {
+    margin: 40px 0;
+    width: 50px;
+    height: 1px;
+    border-color: rgba(255, 255, 255, .1);
+}
+
+.leftButtom {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+.button {
+    display: flex;
+    justify-content: flex-end;
+    width: 48px;
+    height: 48px;
+    border-radius: 500px;
+    background-color: rgb(255, 255, 255, .1);
+}

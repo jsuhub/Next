@@ -4,7 +4,7 @@
     flex-direction: column;
     flex: 1;
     gap: 12px;
-    padding: 16px;
+    padding: 24px;
     border-radius: 5px;
     margin-bottom: 24px;
     background-color: rgba(255, 255, 255, .1);
@@ -27,47 +27,14 @@
     gap: 24px;
     padding: 0 0 12px 0;
     border-bottom: 1px solid rgb(255, 255, 255, .1);
-}
-
-.recommend {
-    color: rgb(255, 255, 255, .4);
-}   
-
-.recommend:hover {
-    color: white;
-}   
-
-.latest {
-    color: rgb(255, 255, 255, .4);
-
-}
-
-.latest:hover {
-    color: white;
-    
-}
+} 
 
 .active {
     color: rgb(255, 255, 255, .4);
-
 }
 
-.card {
-    display: flex;
-    flex-direction: column;
-    height: 160px;
-    padding: 16px;
-    gap: 16px;
-    background-color: rgb(255, 255, 255, .3);
-    border-radius: 5px;
+.active:hover {
+    color: white;
+    cursor: pointer;
 }
 
-.cardInfo {
-    display: flex;
-    gap: 16px;
-}
-
-.cardBottom {
-    display: flex;
-    gap: 16px;
-}
