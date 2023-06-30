@@ -4,7 +4,7 @@ import Card from "./card/card";
 import request from "@/lib/request/request";
 
 const active = {
-    color: "white"
+    color: "black"
 }
 
 export default function Aritcle() {

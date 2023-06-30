@@ -2,7 +2,6 @@
 .right {
     display: flex;
     flex-direction: column;
-    width: 400px;
     gap: 16px;
     width: 21.66rem;
     border-radius: 5px;
@@ -25,7 +24,7 @@
     border-radius: 5px;
     flex-direction: column;
     gap: 16px;
-    background-color: rgb(255, 255, 255, .1);
+    background-color: white;
 }
 
 .rightFirst {

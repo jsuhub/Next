@@ -1,4 +1,3 @@
-import Nav from "@/components/Nav/Nav";
 import { transformMarkdown } from "@/lib/ssg/transformMarkdown";
 import { Fragment, useEffect, useState } from "react";
 import PostLayout from "@/layout/post/Post";

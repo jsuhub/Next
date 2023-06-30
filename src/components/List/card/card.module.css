@@ -1,20 +1,106 @@
-
 .card {
     display: flex;
+    flex: 1;
     flex-direction: column;
-    height: 160px;
-    padding: 16px;
-    gap: 16px;
-    background-color: rgb(255, 255, 255, .2);
-    border-radius: 5px;
+    height: 128px;
+    padding: 12px 20px 0 20px;
+    border-bottom: 1px solid var(--border-color);
+    box-sizing: content-box;
+}
+
+.card:hover {
+    background-color: var(--card-color);
 }
 
 .cardInfo {
     display: flex;
-    gap: 16px;
+    align-items: center;
+    line-height: 24px;
 }
 
 .cardBottom {
     display: flex;
     gap: 16px;
+}
+
+.author {
+    font-family: var(--font-family);
+    font-size: 16px;
+    color: var(--font-color);
+}
+
+.padding {
+    font-family: var(--font-family);
+    font-size: 14px;
+    margin-left: 16px;
+    position: relative;
+    padding: 0 12px;
+    color: var(--font-color);
+}
+
+.padding::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 1px;
+    height: 24px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    background-color: var(--border-color);
+}
+
+.title {
+    font-family: var(--font-family);
+    margin: 8px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(37, 41, 51);
+}
+
+.description {
+    font-family: var(--font-family);
+    margin: 8px 0;
+    line-height: 13px;
+    height: 13px;
+    font-size: 13px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: rgba(0, 0, 0, .4);
+}
+
+.cardBottom {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.browser {
+    line-height: 13px;
+    height: 13px;
+    font-size: 13px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: rgba(0, 0, 0, .4);
+}
+
+.like {
+    line-height: 13px;
+    height: 13px;
+    font-size: 13px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: rgba(0, 0, 0, .4);
+}
+
+.commend {
+    line-height: 13px;
+    height: 13px;
+    font-size: 13px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: rgba(0, 0, 0, .4);
 }

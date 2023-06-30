@@ -16,6 +16,8 @@
 }
 
 .link:hover {
-    background-color: rgb(255, 255, 255, .25);
+    color: var(--theme-color);
+    background-color: #1e80ff4d;
+    transition: background-color 0.3s ease;
 }
 

@@ -29,18 +29,16 @@ export default function Card({ articleList }) {
                 return (
                     <div onClick={showArticle(id)}  className={style.card}>
                         <div className={style.cardInfo}>
-                            <div>{author}</div>
-                            <div> | </div>
-                            <div>{publish_date}</div>
-                            <div> | </div>
-                            <div>{tag}</div>
+                            <div className={style.author}>{author}</div>
+                            <div className={style.padding}>{publish_date}</div>
+                            <div className={style.padding}>{tag}</div>
                         </div>
-                        <h3>{title}</h3>
-                        <p>{description}</p>
+                        <div className={style.title}>{title}</div>
+                        <div className={style.description}>{description}</div>
                         <div className={style.cardBottom}>
-                            <div>{browser_amount}</div>
-                            <div>{like_amount}</div>
-                            <div>{comment_amount}</div>
+                            <div className={style.browser}>{browser_amount}</div>
+                            <div className={style.like}>{like_amount}</div>
+                            <div className={style.commend}>{comment_amount}</div>
                         </div>
                     </div>
 

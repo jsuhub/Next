@@ -1,9 +1,6 @@
 import Nav from "@/components/Nav/Nav";
 import { Fragment } from "react";
 import style from './Post.module.css';
-import Navigator from "@/components/Navigator/Navigator";
-import Sidebar from "@/components/Sidebar/Sidebar";
-import 'highlight.js/styles/atom-one-dark.css';
 import PostStatus from './PostStatus/PostStatus';
 
 export default function PostLayout(props) {

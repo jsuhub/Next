@@ -2,14 +2,8 @@ import { Fragment } from "react";
 import style from './Nav.module.css';
 import Image from "next/image";
 import Link from "next/link";
-// import { useStore } from "zustand";
 
 export default function Nav() {
-
-    // const [isLogin, setIsLogin] = useStore(
-    //     state => [state.isLogin, state.setIsLogin]
-    // )
-
 
     return (
         <Fragment>
@@ -20,21 +14,21 @@ export default function Nav() {
                             className={style.logo}
                             alt="LOGO"
                             src={"/javascript.svg"}
-                            width={100}
+                            width={64}
                             height={24}
                         ></Image>
-                        <Link href={"/"}>首页</Link>
-                        <Link href={"/question"}>问题</Link>
+                        <Link className={style.item} href={"/"}>首页</Link>
+                        <Link className={style.item} href={"/question"}>问题</Link>
                     </div>
 
-                    <div className={style.headerButtons}>
-                        <input className={style.search} type="text" placeholder="  搜索内容🔍" />
+                    <div className={style.right}>
+                        <input className={style.search} type="text"/>
                         {
                             true == true
                                 ? (
-                                    <div>
+                                    <div className={style.wrapper}> 
                                         <button className={style.avatar}></button>
-                                        <Link href={"/"}>退出</Link>
+                                        <Link href={"/"}>登出</Link>
                                     </div>
                                 )
                                 : (

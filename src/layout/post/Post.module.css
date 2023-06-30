@@ -6,17 +6,15 @@
     gap: 24px;
 }
 
-
 .middle {
     display: flex;
     min-width: 400px;
     flex-direction: column;
-    padding: 0 16px;
+    padding: 32px 32px 0;
     border-radius: 5px;
     flex: 1;
-    background-color: rgba(255, 255, 255, .1);
+    background-color: white;
 }
-
 
 @media screen and (max-width: 1200px) {
     .middle {
@@ -38,7 +36,7 @@
     width: 300px;
     border-radius: 5px;
     align-self: self-start;
-    background-color: rgba(255, 255, 255, .1);
+    background-color: white;
 }
 
 @media screen and (max-width: 900px) {
