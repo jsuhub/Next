@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     height: calc(100vh - 64px);
-    background-color: #000000;
+    background-color: var(--background-color);
     align-items: center;
     padding-top: 100px;
 }
@@ -23,6 +23,7 @@
     border: 0;
     font-size: large;
     background-color: #25292e;
+    color: white;
 }
 
 .gitlab {
@@ -34,6 +35,7 @@
     border: 0;
     font-size: large;
     background-color: #6750b5;
+    color: white;
 }
 
 .bitbucket {
@@ -45,6 +47,7 @@
     border: 0;
     font-size: large;
     background-color: #2151c5;
+    color: white;
 }
 
 .hr {
@@ -60,6 +63,7 @@
     height: 48px;
     border-radius: 5px;
     border: 0;
+    color: white;
     font-size: large;
     background-color: #545454;
 }

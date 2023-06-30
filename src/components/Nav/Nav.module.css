@@ -18,10 +18,9 @@
 }
 
 .link {
-    flex: 2;
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 24px;
 }
 
 .item {
@@ -52,7 +51,7 @@
 }
 
 .right {
-    flex: 1;
+    flex-grow: 1;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -73,7 +72,7 @@
     background-color: #1e80ff;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 640px) {
     .search {
         display: none;
     }
@@ -82,17 +81,18 @@
 .feedback {
     width: 90px;
     height: 36px;
-    background-color: #000000;
+    background-color: #1e80ff;
     color: rgb(255, 255, 255);
-    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 5px;
+    border: none;
+    margin-right: 12px;
 }
 
 .signUp {
     width: 70px;
     height: 36px;
-    background-color: #fff;
-    color: black;
+    background-color: #1e80ff;
+    color: white;
     border: none;
     border-radius: 5px;
 }
@@ -100,7 +100,7 @@
 .avatar {
     width: 48px;
     height: 48px;
-    color: black;
+    color: #ffffff;
     border-radius: 588px;
     border: 1px solid var(--theme-color);
 }

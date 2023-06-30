@@ -1,7 +1,8 @@
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useContext, useEffect, useState } from "react";
 import style from './List.module.css';
-import Card from "./card/card";
+import Card from "./card/Card";
 import request from "@/lib/request/request";
+import { Context } from "@/state/Context";
 
 const active = {
     color: "black"
@@ -9,11 +10,18 @@ const active = {
 
 export default function Aritcle() {
 
-    const [articleList, setArticleList] = useState([])
-    const [page, setPage] = useState(1);
-    const [isRecommendActive, setRecommendActive] = useState(true);
-    const [isLatestActive, setLatestActive] = useState(false);
-    const [isHotActive, setHotActive] = useState(false);
+    const {
+        articleList,
+        setArticleList,
+        isRecommendActive,
+        setRecommendActive,
+        isLatestActive,
+        setLatestActive,
+        isHotActive,
+        setHotActive,
+        page,
+        setPage
+    } = useContext(Context);
 
     const handleRecommendClick = () => {
         setArticleList([])
@@ -55,11 +63,11 @@ export default function Aritcle() {
 
     useEffect(() => {
 
-        if(isRecommendActive) {
+        if (isRecommendActive) {
             requestArticle(`api/articles/list/${page}/${5}`)
         }
 
-        if(isLatestActive) {
+        if (isLatestActive) {
             requestArticle(`api/articles/list/hot?page=${page}&size=${5}`)
         }
 

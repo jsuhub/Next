@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import style from './Sidebar.module.css';
+import Link from "next/link";
 export default function Sidebar() {
     return (
         <Fragment>
@@ -17,8 +18,10 @@ export default function Sidebar() {
                                 <div>回答问题</div>
                             </div>
                             <div className={style.rightSecondCard}>
-                                <button className={style.rightSecondButton}></button>
-                                <div>写问题</div>
+                                <Link href="/editor">
+                                    <button className={style.rightSecondButton}></button>
+                                    <div>写文章</div>
+                                </Link>
                             </div>
                             <div className={style.rightSecondCard}>
                                 <button className={style.rightSecondButton}></button>

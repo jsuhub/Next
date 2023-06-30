@@ -30,3 +30,7 @@ a {
   --border-color: rgba(83, 60, 60, 0.2);
   --theme-color: #1e80ff;
 }
+
+.bytemd {
+  height: calc(100vh - 200px);
+}

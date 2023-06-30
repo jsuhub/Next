@@ -2,6 +2,7 @@ import { transformMarkdown } from "@/lib/ssg/transformMarkdown";
 import { Fragment, useEffect, useState } from "react";
 import PostLayout from "@/layout/post/Post";
 import request from "@/lib/request/request";
+import 'highlight.js/styles/atom-one-dark.css';
 
 export default function Post(props) {
 

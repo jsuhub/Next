@@ -4,7 +4,7 @@
     width: 160px;
 }
 
-@media screen and (max-width: 1230px) {
+@media screen and (max-width: 1200px) {
     .left {
         display: none;
     }

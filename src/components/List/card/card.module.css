@@ -63,7 +63,7 @@
     line-height: 13px;
     height: 13px;
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 800;
     text-overflow: ellipsis;
     overflow: hidden;
     color: rgba(0, 0, 0, .4);
@@ -75,7 +75,15 @@
     margin: 8px 0;
 }
 
-.browser {
+.height {
+    line-height: 13px;
+    height: 13px;
+}
+
+.svg {
+    display: flex;
+    align-items: center;
+    gap: 4px;
     line-height: 13px;
     height: 13px;
     font-size: 13px;
@@ -85,22 +93,3 @@
     color: rgba(0, 0, 0, .4);
 }
 
-.like {
-    line-height: 13px;
-    height: 13px;
-    font-size: 13px;
-    font-weight: 700;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    color: rgba(0, 0, 0, .4);
-}
-
-.commend {
-    line-height: 13px;
-    height: 13px;
-    font-size: 13px;
-    font-weight: 700;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    color: rgba(0, 0, 0, .4);
-}

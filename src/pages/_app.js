@@ -1,6 +1,12 @@
 import '@/styles/globals.css'
 import '@/styles/markdown.css'
-import 'highlight.js/styles/a11y-light.css';
+
+import { AuthProvider } from '@/state/Context';
+
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <AuthProvider>
+      <Component {...pageProps} />
+    </AuthProvider>
+  )
 }
