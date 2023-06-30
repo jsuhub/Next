@@ -30,7 +30,6 @@
     "remark-parse": "^10.0.2",
     "remark-rehype": "^10.1.0",
     "remark-toc": "^8.0.1",
-    "unified": "^10.1.2",
-    "zustand": "^4.3.8"
+    "unified": "^10.1.2"
   }
 }
